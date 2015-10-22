@@ -27,9 +27,8 @@ h1 {
   text-align: center;
 }
 
-p { 
+form p { 
   display: table-row;
-  text-align: right;
 }
 
 label {
@@ -41,6 +40,7 @@ label {
 input { 
   display: table-cell;
   margin: 8px 0px;
+  padding: 8px;
 }
 
 #submit {
@@ -63,11 +63,18 @@ INFO
 **************/
 
 h2 {
+  font-size: 3em;
   text-align: center;
 }
 
 .beer_number {
+  margin: 50px 0px;
   text-align: center;
+  font-size: 2em;
+}
+
+.count_color {
+  color: darkred;
 }
 
 /**************
