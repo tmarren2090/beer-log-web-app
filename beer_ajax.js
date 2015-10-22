@@ -1,3 +1,5 @@
+//Reset form after it is submitted and automatically refresh the page
+
 jQuery(document).ready(function(){
 
     jQuery('.beer_ajax').submit( function() {
@@ -19,3 +21,9 @@ jQuery(document).ready(function(){
     });
 
 });
+
+//Count all the rows of the table and display how many beers have been tried
+
+var beerCount = $('tr').length - 1;
+
+$( ".beer_number" ).append( "<p>I have tried " + beerCount + " beers</p>" );
