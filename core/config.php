@@ -3,13 +3,13 @@
 
 /*MySQL Settings*/
 /*Database name*/
-define('DB_NAME', 'beer');
+define('DB_NAME', 'insert_database_name');
 
 /*Database user*/
-define('DB_USER', 'root');
+define('DB_USER', 'insert_database_user');
 
 /*Database user password*/
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', 'insert_database_password');
 
 /* Chances are you won't need to change the following three
 settings. Only do so if you know what you're doing.*/
