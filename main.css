@@ -16,7 +16,7 @@ body {
 form {
   max-width: 300px;
   margin: 10px auto;
-  padding: 10px 20px;
+  padding: 20px 20px;
   background: lightgray;
   border-radius: 8px;
   display: table;
@@ -32,35 +32,19 @@ p {
   text-align: right;
 }
 
+label {
+  display: inline-block;
+  margin-bottom: 8px;
+  width: 200px;
+}
+
 input { 
   display: table-cell;
   margin: 8px 0px;
 }
 
-
-select {
-  background: rgba(255,255,255,0.1);
-  border: none;
-  font-size: 16px;
-  height: auto;
-  margin: 0;
-  outline: 0;
-  padding: 15px;
-  width: 100%;
-  background-color: #e8eeef;
-  color: #8a97a0;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-  margin-bottom: 5px;
-}
-
-select {
-  padding: 6px;
-  height: 32px;
-  border-radius: 2px;
-}
-
-button {
-  padding: 19px 39px 18px 39px;
+#submit {
+  padding: 20px;
   color: #FFF;
   background-color: #4bc970;
   font-size: 18px;
@@ -71,41 +55,19 @@ button {
   border: 1px solid #3ac162;
   border-width: 1px 1px 3px;
   box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
-fieldset {
-  margin-bottom: 30px;
-  border: none;
-}
+/**************
+INFO
+**************/
 
-legend {
-  font-size: 1.4em;
-  margin-bottom: 10px;
-}
-
-label {
-  display: block;
-  margin-bottom: 8px;
-}
-
-label.light {
-  font-weight: 300;
-  display: inline;
-}
-
-.number {
-  background-color: #5fcf80;
-  color: #fff;
-  height: 30px;
-  width: 30px;
-  display: inline-block;
-  font-size: 0.8em;
-  margin-right: 4px;
-  line-height: 30px;
+h2 {
   text-align: center;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
-  border-radius: 100%;
+}
+
+.beer_number {
+  text-align: center;
 }
 
 /**************
@@ -118,8 +80,10 @@ TABLE
 
 th {
   padding: 10px 10px;
-  background-color: dimgray;
-  color: white;
+}
+
+th a {
+  color: forestgreen;
 }
 
 tr {
