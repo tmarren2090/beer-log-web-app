@@ -25,6 +25,7 @@
   <label>ABV%: <input type="text" name="abv"></label>
   <label>Rating (1-5): <input type="text" name="rating"></label>
   <label>Comments: <textarea type="text" name="comments"></textarea></label>
+  <br>
   <input type="submit" value="Submit" id="submit"/>
 </form>
 
@@ -51,15 +52,15 @@ echo '<div class="container">';
 echo '<table border="1" style="width:100%" id="myTable" class="tablesorter">';
 echo '<thead>
       <tr>
-      <th>Beer</th>
-      <th>Brewery</th> 
-      <th>City</th>
-      <th>State/Country</th>
-      <th>Type</th>
-      <th>Style</th>
-      <th>ABV%</th>
-      <th>Rating</th>
-      <th>Comments</th>
+      <th><a href="#">Beer</a></th>
+      <th><a href="#">Brewery</a></th> 
+      <th><a href="#">City</a></th>
+      <th><a href="#">State/Country</a></th>
+      <th><a href="#">Type</a></th>
+      <th><a href="#">Style</a></th>
+      <th><a href="#">ABV%</a></th>
+      <th><a href="#">Rating</a></th>
+      <th><a href="#">Comments</a></th>
       </tr>
       </thead>
       <tbody>';
