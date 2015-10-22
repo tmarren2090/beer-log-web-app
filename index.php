@@ -1,25 +1,32 @@
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="beer_ajax.js"></script>
-
 <link rel="stylesheet" href="normalize.css">
 <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="main.css">
 
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="jquery.tablesorter.js"></script>
+<script type="text/javascript" id="js">
+  $(document).ready(function() { 
+    // call the tablesorter plugin 
+    $("table").tablesorter({ 
+        // sort on the first column and third column, order asc 
+        sortList: [[0,0]] 
+    }); 
+});  
+</script>
+
 <form action="input.php" method="post" class="beer_ajax" style="text-align: center"/>
 
-  <p>Beer: <input type="text" name="beer" /></p>
-  <p>Brewery: <input type="text" name="brewery" /></p>
-  <p>City: <input type="text" name="city" /></p>
-  <p>State/Country: <input type="text" name="state_country" /></p>
-  <p>Type: <input type="text" name="type" /></p>
-  <p>Style: <input type="text" name="style" /></p>
-  <p>ABV%: <input type="text" name="abv" /></p>
-  <p>Rating (1-5): <input type="text" name="rating" /></p>
-  <p>Comments: <textarea type="text" name="comments"></textarea></p>
+  <label>Beer: <input type="text" name="beer"></label>
+  <label>Brewery: <input type="text" name="brewery"></label>
+  <label>City: <input type="text" name="city"></label>
+  <label>State/Country: <input type="text" name="state_country"></label>
+  <label>Type: <input type="text" name="type"></label>
+  <label>Style: <input type="text" name="style"></label>
+  <label>ABV%: <input type="text" name="abv"></label>
+  <label>Rating (1-5): <input type="text" name="rating"></label>
+  <label>Comments: <textarea type="text" name="comments"></textarea></label>
   <input type="submit" value="Submit" id="submit"/>
 </form>
-
-<div id="confirm"></div>
 
 <?php
 
@@ -36,10 +43,14 @@ if (!$results) {
   die ('Invalid query: ' . mysql_error());
 }
 
-echo '<h2 style="text-align: center">I Love Beer</h2>';
+echo '<h2>I <span id="love">Love</span> Beer</h2>';
+
+echo '<div class="beer_number"></div>';
+
 echo '<div class="container">';
-echo '<table border="1" style="width:100%">';
-echo '<tr>
+echo '<table border="1" style="width:100%" id="myTable" class="tablesorter">';
+echo '<thead>
+      <tr>
       <th>Beer</th>
       <th>Brewery</th> 
       <th>City</th>
@@ -49,7 +60,9 @@ echo '<tr>
       <th>ABV%</th>
       <th>Rating</th>
       <th>Comments</th>
-      </tr>';
+      </tr>
+      </thead>
+      <tbody>';
 
 while($result = mysql_fetch_array( $results )){
 
@@ -69,8 +82,10 @@ while($result = mysql_fetch_array( $results )){
 
 }
 
-echo '</table>';
-echo '</div>';
+echo '</tbody>
+      </table>
+      </div>';
 
 ?>
 
+<script type="text/javascript" src="beer_ajax.js"></script>
