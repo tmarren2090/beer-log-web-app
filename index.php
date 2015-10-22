@@ -44,7 +44,7 @@ if (!$results) {
   die ('Invalid query: ' . mysql_error());
 }
 
-echo '<h2>I <span id="love">Love</span> Beer</h2>';
+echo '<h2>I Love Beer</h2>';
 
 echo '<div class="beer_number"></div>';
 

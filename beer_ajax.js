@@ -26,4 +26,4 @@ jQuery(document).ready(function(){
 
 var beerCount = $('tr').length - 1;
 
-$( ".beer_number" ).append( "<p>I have tried " + beerCount + " beers</p>" );
+$( ".beer_number" ).append( "<p>I have tried <span class='count_color'>" + beerCount + "</span> beers</p>" );
