@@ -27,3 +27,26 @@ jQuery(document).ready(function(){
 var beerCount = $('tr').length - 1;
 
 $( ".beer_number" ).append( "<p>I have tried <span class='count_color'>" + beerCount + "</span> beers</p>" );
+
+//Flip font icon when table header is clicked
+
+$("a").click( function(){
+  
+  if ($(this).children().hasClass("fa fa-sort-asc")){
+    
+    $("i").removeClass();
+    $(this).children().addClass("fa fa-sort-desc");
+    
+  } else if ($(this).children().hasClass("fa fa-sort-desc")) {
+  
+    $("i").removeClass();
+    $(this).children().addClass("fa fa-sort-asc");
+  
+  } else {
+
+    $("i").removeClass();
+    $(this).children().addClass("fa fa-sort-asc");
+  
+  }
+  
+});
