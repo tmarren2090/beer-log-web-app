@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="normalize.css">
 <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.css">
 
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="jquery.tablesorter.js"></script>
@@ -52,15 +53,15 @@ echo '<div class="container">';
 echo '<table border="1" style="width:100%" id="myTable" class="tablesorter">';
 echo '<thead>
       <tr>
-      <th><a href="#">Beer</a></th>
-      <th><a href="#">Brewery</a></th> 
-      <th><a href="#">City</a></th>
-      <th><a href="#">State/Country</a></th>
-      <th><a href="#">Type</a></th>
-      <th><a href="#">Style</a></th>
-      <th><a href="#">ABV%</a></th>
-      <th><a href="#">Rating</a></th>
-      <th><a href="#">Comments</a></th>
+      <th><a href="#">Beer   <i class="fa fa-sort-asc"></i></a></th>
+      <th><a href="#">Brewery   <i></i></a></th> 
+      <th><a href="#">City   <i></i></a></th>
+      <th><a href="#">State/Country   <i></i></a></th>
+      <th><a href="#">Type   <i></i></a></th>
+      <th><a href="#">Style   <i></i></a></th>
+      <th><a href="#">ABV%   <i></i></a></th>
+      <th><a href="#">Rating   <i></i></a></th>
+      <th><a href="#">Comments   <i></i></a></th>
       </tr>
       </thead>
       <tbody>';
