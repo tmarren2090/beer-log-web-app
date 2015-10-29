@@ -1,6 +1,4 @@
-/***********
-FORM
-***********/
+
 
 *, *:before, *:after {
   -moz-box-sizing: border-box;
@@ -10,16 +8,61 @@ FORM
 
 body {
   font-family: 'Nunito', sans-serif;
-  color: #384047;
+}
+
+/***********
+NAV
+***********/
+
+nav {
+  background-color: seagreen;
+  height: 50px;
+}
+
+nav h2 {
+  text-align: center;
+  padding-top: 10px;
+  color: white;
+}
+
+
+/***********
+FORM
+***********/
+
+.form::after {
+  content: "";
+  background: url("beer_bgr.jpg");
+  background-size: 100%;
+  opacity: 0.8;
+  min-width: 960px;
+  height: 800px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+.wrapper {
+  background-color: #f5f2e8;
+  margin: 0px;
+  padding: 50px 0px;
+}
+
+.beerLove {
+  font-size: 3em;
 }
 
 form {
   max-width: 300px;
-  margin: 10px auto;
+  margin: 70px 0px 70px 15%;
   padding: 20px 20px;
-  background: #A9A178;
-  color: white;
-  border-radius: 8px;
+  background: white;
+  color: dimgray;
+  box-shadow: 0px 1px 5px #888888;
+  border-radius: 4px;
   display: table;
 }
 
@@ -39,80 +82,80 @@ label {
 }
 
 input, textarea { 
+  margin: 0px;
+  padding: 5px;
+  border: 1px solid white;
   color: gray;
+  background-color: #f5f2e8;
   display: table-cell;
-  margin: 8px 0px;
-  padding: 8px;
 }
 
 #submit {
+  width: 75%;
+  margin-top: 10px;
   padding: 20px;
   color: white;
-  background-color: #DDC6A2;
+  background-color: seagreen;
   font-size: 18px;
   text-align: center;
   font-style: normal;
-  border-radius: 5px;
-  width: 100%;
-  margin-top: 10px;
+  border-radius: 4px;
   border: 2px solid white;
 }
 
 #submit:hover {
-  background-color: white;
-  color: #DDC6A2;
-  border: 2px solid #DDC6A2;
+  background-color: darkseagreen;
 }
 
 /**************
 INFO
 **************/
 
-h2 {
-  font-size: 3em;
-  text-align: center;
-}
-
 .beer_number {
-  margin: 50px 0px;
+  margin: 0px 50px 50px;
+  padding: 10px 0px;
   text-align: center;
+  background-color: white;
+  box-shadow: 0px 1px 5px #888888;
   font-size: 2em;
 }
 
 .count_color {
-  color: darkred;
+  font-size: 1.5em;
 }
 
 /**************
 SEARCH
 **************/
 
-.search {
-  text-align: center;
-}
 
 /**************
 TABLE
 **************/
 
 .container {
-  margin: 20px 50px;
+  margin: 20px 25px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 1px 5px #888888;
 }
 
 th {
   padding: 10px 10px;
+  background-color: seagreen;
 }
 
 th a {
-  color: forestgreen;
+  color: white;
 }
 
 tr {
   text-align: center;
+  background-color: white;
 }
 
 tr:nth-child(even) {
-  background-color: lightgray;
+  background-color: rgba(221, 198, 162, .5);
 }
 
 td {
@@ -139,10 +182,33 @@ MEDIA QUERIES
 
   form {
     max-width: 480px;
+    margin: 20px auto;
+  }
+  
+  input {
+    display: inline;
+    padding: 5px;
+    margin: 0px;
   }
   
   p {
     font-size: .9em;
+  }
+  
+  .count_color {
+  display: block;
+  }
+  
+  .container {
+    min-width: 345px;
+  }
+  
+  th:nth-of-type(1n+3) { 
+    display:none; 
+  }
+  
+  td:nth-of-type(1n+3) { 
+    display:none; 
   }
 
 }
