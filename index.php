@@ -16,6 +16,12 @@ $(document).ready(function() {
 });
 </script>
 
+<nav>
+<h2>I Love Beer</h2>
+</nav>
+
+<div class="form">
+
 <form action="input.php" method="post" class="beer_ajax" style="text-align: center"/>
 
   <label>Beer: <input type="text" name="beer"></label>
@@ -30,6 +36,10 @@ $(document).ready(function() {
   <br>
   <input type="submit" value="Submit" id="submit"/>
 </form>
+  
+  </div>
+
+<div class="wrapper">
 
 <?php
 
@@ -45,8 +55,6 @@ $results = mysql_query($sql);
 if (!$results) {
   die ('Invalid query: ' . mysql_error());
 }
-
-echo '<h2>I Love Beer</h2>';
 
 echo '<div class="beer_number"></div>';
 
@@ -90,5 +98,7 @@ echo '</tbody>
       </div>';
 
 ?>
+
+</div>
 
 <script type="text/javascript" src="beer_ajax.js"></script>
