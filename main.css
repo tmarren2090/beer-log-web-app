@@ -17,7 +17,8 @@ form {
   max-width: 300px;
   margin: 10px auto;
   padding: 20px 20px;
-  background: lightgray;
+  background: #A9A178;
+  color: white;
   border-radius: 8px;
   display: table;
 }
@@ -37,7 +38,8 @@ label {
   width: 200px;
 }
 
-input { 
+input, textarea { 
+  color: gray;
   display: table-cell;
   margin: 8px 0px;
   padding: 8px;
@@ -45,17 +47,21 @@ input {
 
 #submit {
   padding: 20px;
-  color: #FFF;
-  background-color: #4bc970;
+  color: white;
+  background-color: #DDC6A2;
   font-size: 18px;
   text-align: center;
   font-style: normal;
   border-radius: 5px;
   width: 100%;
-  border: 1px solid #3ac162;
-  border-width: 1px 1px 3px;
-  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
   margin-top: 10px;
+  border: 2px solid white;
+}
+
+#submit:hover {
+  background-color: white;
+  color: #DDC6A2;
+  border: 2px solid #DDC6A2;
 }
 
 /**************
@@ -75,6 +81,14 @@ h2 {
 
 .count_color {
   color: darkred;
+}
+
+/**************
+SEARCH
+**************/
+
+.search {
+  text-align: center;
 }
 
 /**************
@@ -103,6 +117,10 @@ tr:nth-child(even) {
 
 td {
   padding: 5px 10px;
+}
+
+i {
+  margin: 0 5px;
 }
 
 /**************
