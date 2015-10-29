@@ -5,14 +5,12 @@
 
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="jquery.tablesorter.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
 
 
 <script type="text/javascript">
 $(document).ready(function() {
-    $('#myTable').DataTable();
     $("table").tablesorter({ 
-        // sort on the first column and third column, order asc 
+        // sort on the first column, order asc 
         sortList: [[0,0]]
 });
 });
@@ -56,15 +54,15 @@ echo '<div class="container">';
 echo '<table border="1" style="width:100%" id="myTable" class="tablesorter">';
 echo '<thead>
       <tr>
-      <th><a href="#">Beer   <i class="fa fa-sort-asc"></i></a></th>
-      <th><a href="#">Brewery   <i></i></a></th> 
-      <th><a href="#">City   <i></i></a></th>
-      <th><a href="#">State/Country   <i></i></a></th>
-      <th><a href="#">Type   <i></i></a></th>
-      <th><a href="#">Style   <i></i></a></th>
-      <th><a href="#">ABV%   <i></i></a></th>
-      <th><a href="#">Rating   <i></i></a></th>
-      <th><a href="#">Comments   <i></i></a></th>
+      <th><a href="#">Beer<i class="fa fa-sort-asc"></i></a></th>
+      <th><a href="#">Brewery<i></i></a></th> 
+      <th><a href="#">City<i></i></a></th>
+      <th><a href="#">State/Country<i></i></a></th>
+      <th><a href="#">Type<i></i></a></th>
+      <th><a href="#">Style<i></i></a></th>
+      <th><a href="#">ABV%<i></i></a></th>
+      <th><a href="#">Rating<i></i></a></th>
+      <th><a href="#">Comments<i></i></a></th>
       </tr>
       </thead>
       <tbody>';
