@@ -5,14 +5,17 @@
 
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="jquery.tablesorter.js"></script>
-<script type="text/javascript" id="js">
-  $(document).ready(function() { 
-    // call the tablesorter plugin 
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#myTable').DataTable();
     $("table").tablesorter({ 
         // sort on the first column and third column, order asc 
-        sortList: [[0,0]] 
-    }); 
-});  
+        sortList: [[0,0]]
+});
+});
 </script>
 
 <form action="input.php" method="post" class="beer_ajax" style="text-align: center"/>
