@@ -1,8 +1,8 @@
 //Reset form after it is submitted and automatically refresh the page
 
-jQuery(document).ready(function(){
+$(document).ready(function(){
 
-    jQuery('.beer_ajax').submit( function() {
+    $('.beer_ajax').submit( function() {
 
         $.ajax({
             url     : $(this).attr('action'),
@@ -30,23 +30,26 @@ $( ".beer_number" ).append( "<p>I have tried <span class='count_color'>" + beerC
 
 //Flip font icon when table header is clicked
 
-$("a").click( function(){
+$("th").click( function(){
   
-  if ($(this).children().hasClass("fa fa-sort-asc")){
+  if ($(this).hasClass("headerSortDown")){
     
     $("i").removeClass();
-    $(this).children().addClass("fa fa-sort-desc");
+    $(this).find('i').addClass("fa fa-sort-desc");
     
-  } else if ($(this).children().hasClass("fa fa-sort-desc")) {
+  } else if ($(this).hasClass("headerSortUp")) {
   
     $("i").removeClass();
-    $(this).children().addClass("fa fa-sort-asc");
+    $(this).find('i').addClass("fa fa-sort-asc");
   
   } else {
-
-    $("i").removeClass();
-    $(this).children().addClass("fa fa-sort-asc");
   
+    $("i").removeClass();
+    $(this).find('i').addClass("fa fa-sort");
+    
   }
   
 });
+
+//Add search function
+
