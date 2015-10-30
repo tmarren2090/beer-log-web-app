@@ -8,12 +8,14 @@
 
 
 <script type="text/javascript">
+  
 $(document).ready(function() {
     $("table").tablesorter({ 
-        // sort on the first column, order asc 
+        // initial sort on the first column, order asc 
         sortList: [[0,0]]
 });
 });
+  
 </script>
 
 <nav>
@@ -62,15 +64,15 @@ echo '<div class="container">';
 echo '<table border="1" style="width:100%" id="myTable" class="tablesorter">';
 echo '<thead>
       <tr>
-      <th><a href="#">Beer<i class="fa fa-sort-asc"></i></a></th>
-      <th><a href="#">Brewery<i></i></a></th> 
-      <th><a href="#">City<i></i></a></th>
-      <th><a href="#">State/Country<i></i></a></th>
-      <th><a href="#">Type<i></i></a></th>
-      <th><a href="#">Style<i></i></a></th>
-      <th><a href="#">ABV%<i></i></a></th>
-      <th><a href="#">Rating<i></i></a></th>
-      <th><a href="#">Comments<i></i></a></th>
+      <th id="beer"><a href="#">Beer<i class="fa fa-sort"></i></a></th>
+      <th id="brewery"><a href="#">Brewery<i class="fa fa-sort"></i></a></th> 
+      <th id="city"><a href="#">City<i class="fa fa-sort"></i></a></th>
+      <th id="state"><a href="#">State/Country<i class="fa fa-sort"></i></a></th>
+      <th id="type"><a href="#">Type<i class="fa fa-sort"></i></a></th>
+      <th id="style"><a href="#">Style<i class="fa fa-sort"></i></a></th>
+      <th id="abv"><a href="#">ABV%<i class="fa fa-sort"></i></a></th>
+      <th id="rating"><a href="#">Rating<i class="fa fa-sort"></i></a></th>
+      <th id="comments"><a href="#">Comments<i class="fa fa-sort"></i></a></th>
       </tr>
       </thead>
       <tbody>';
