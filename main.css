@@ -157,8 +157,9 @@ th {
   background-color: seagreen;
 }
 
-th a {
+#edit, th a {
   font-size: 1.3em;
+  text-decoration: none;
   color: white;
 }
 
@@ -191,11 +192,18 @@ i {
   margin: 0 5px;
 }
 
+#editIcon {
+  font-family: FontAwesome;
+  color: seagreen;
+  background-color: rgba(255,0,0,0);
+  border: 0px;
+}
+
 /**************
 MEDIA QUERIES
 **************/
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1270px) {
   
   table * {
     font-size: .9em;
@@ -213,7 +221,7 @@ MEDIA QUERIES
 }
 
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1020px) {
 
   .form::after {
     display: none;
@@ -246,6 +254,14 @@ MEDIA QUERIES
     min-width: 345px;
   }
   
+  #beer, #brewery {
+    width: 0%;
+}
+
+  #edit {
+    width: 10%;
+  }
+  
   th:nth-of-type(1n+3) { 
     display:none; 
   }
@@ -253,6 +269,27 @@ MEDIA QUERIES
   td:nth-of-type(1n+3) { 
     display:none; 
   }
+  
+  th:nth-of-type(1n+10) { 
+    display: table-cell; 
+  }
+  
+  td:nth-of-type(1n+10) { 
+    display: table-cell; 
+  }
+  
+}
+
+@media screen and (max-width: 1020px) {
+  
+  #beer, #brewery, #edit {
+    font-size: .8em;
+  }
+  
+  td {
+    font-size: .7em;
+  }
+
 }
 
 
