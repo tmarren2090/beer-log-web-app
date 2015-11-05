@@ -36,7 +36,8 @@ $(document).ready(function() {
   <label>Rating (1-5): <input type="text" name="rating"></label>
   <label>Comments: <textarea type="text" name="comments"></textarea></label>
   <br>
-  <input type="submit" value="Submit" id="submit"/>
+  <input type="submit" value="Add Beer" id="submit"/>
+  <p id="success"></p>
 </form>
   
   </div>
