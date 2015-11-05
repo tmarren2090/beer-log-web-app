@@ -9,8 +9,11 @@ $(document).ready(function(){
             type    : $(this).attr('method'),
             data    : $(this).serialize(),
             success : function( data ) {
-                         $('.beer_ajax')[0].reset();
-                         window.location.reload();
+                        $('.beer_ajax')[0].reset();
+                        $("#success").text("Cheers!").fadeIn( "slow" ).delay( 1000 ).fadeOut( "slow" );
+                        setTimeout(function(){
+                        window.location.reload();
+                    }, 200);
                       },
             error   : function(){
                          alert('Something wrong');
@@ -18,6 +21,7 @@ $(document).ready(function(){
         });
 
         return false;
+        
     });
 
 });
